@@ -75,3 +75,10 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 }
+
+:root,
+:root[mode='ios'],
+:root[mode='md'] {
+  --ion-font-family: 'Roboto', sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
+}

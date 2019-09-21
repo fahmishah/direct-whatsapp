@@ -1,14 +1,20 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="success">
     <ion-title>
-      Ionic Blank
+      WhatsApp Direct
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content class="ion-padding">
+  <p class="para">Enter WhatsApp no. with country code:</p>
+  <form class="form" [formGroup]="whatsapp_form"  (ngSubmit)="redirectWhatsApp(whatsapp_form.value)">
+
+    <ion-item>
+      <ion-input placeholder="+60133207287" type="number" formControlName="number" required></ion-input>
+    </ion-item>
+    <br>
+    <ion-button expand="block"  color="success" type="submit">WhatsApp Now<ion-icon name="logo-whatsapp" slot="end"></ion-icon></ion-button>
+  </form>
+  <p class="footer">Developed by, Fahmi Shah @ Kuala Lumpur</p>
 </ion-content>
